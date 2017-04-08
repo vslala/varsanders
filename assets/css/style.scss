@@ -1,0 +1,422 @@
+/*
+Theme Name: Garyvanco
+Theme URI: http://www.varunshrivastava.in
+Author: Varun Shrivastava
+Author URI: http://www.varunshrivastava.in;
+Description: Simplisto as the name suggest is a theme built with minimal requirement which focuses on the speed and performance.
+Version: 1.0
+Text Domain: simplisto
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+//colors
+$color-body-background: #e9ebee;
+$color-primary: #202;
+$color-gold: #cc9;
+$color-link-hover: #06738e;
+$color-navbar-links: white;
+$color-crimson: #dc143c;
+$color_quill_gray_approx: #d3d3d3;
+$black: #000;
+$gray:  grey;
+$white: #fff;
+$sub_header_text: 20pt;
+$sub_header_text_small: 14pt;
+$large_font: 38pt;
+
+h1 {
+	font-size: $large_font;
+}
+h2 {
+	font-size: $large_font - 7;
+}
+h3 {
+	font-size: $large_font - 14;
+}
+h4 {
+	font-size: $large_font - 21;
+}
+
+body{
+	background-color: $color-body-background;
+}
+
+nav.navbar-bma {
+	background-color: $color-primary;
+	li {
+		background-color: $color-primary;
+		&.active a{
+			color: $color-crimson;
+			background-color: $color-primary;
+		}
+	}
+	a {
+		background-color: $color-primary;
+		color: $color-navbar-links;
+		&:hover {
+			color: $color-crimson;
+			background-color: $color-primary;
+		}
+		
+	}
+}
+.wrapper {
+	background-color: white;
+	border: 1px solid lightgrey;
+	padding: 10px;
+}
+.page__heading {
+	font-size: $large_font;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+}
+article.post-wrapper {
+	background-color: white;
+	border: 1px solid lightgrey;
+	padding: 10px;
+}
+article.post {
+	margin: 0px auto;
+	margin-bottom: 2em;
+	padding: 10px;
+
+	p {
+		font-size: large;
+	}
+
+	.post__info {
+		// position: absolute;
+		top: 80%;
+		.list-group {
+			list-style: none;
+			.list-item {
+				vertical-align: middle;
+				display: inline-block;
+				list-style-type: none;
+			}
+		}
+
+		.post__author {
+			font-size: $sub_header_text_small;
+		}
+		.post__category {
+			font-size:  $sub_header_text_small;
+		}
+	}
+
+	.post__title {
+		font-size: $large_font;
+		line-height: 30pt;
+		font-weight: bolder;
+		margin: 20px 0 5px 0;
+
+		a {
+			text-decoration: none;
+			outline: 0;
+			color: black;
+			&:hover {
+				color: black;
+			}
+		}
+	}
+
+	.post__hashtag {
+		font-size: 18pt;
+	}
+
+	.post__date {
+		font-size: $sub_header_text;
+		font-weight: bolder;
+		margin-top: 20px;
+	}
+
+	.post__excerpt {
+		font-size: large;
+		font-weight: 200;
+	}
+
+	.post__link-text {
+		text-decoration: none;
+		outline: 0;
+		font-weight: 700;
+		font-size: 22pt;
+		&:hover {
+			color: $color-link-hover;
+		}
+	}
+
+	div.line-br {
+		width: 100%;
+		&:after {
+			content: "__________________________________";
+			color: black;
+			font-size: 10pt;
+			font-weight: bolder;
+		}
+	}
+}
+
+section.widget-wrapper{
+	.widget {
+		text-align: center;
+		list-style: none;
+		background-color: $color-primary;
+		padding: 5px;
+
+		ul {
+			margin: 0px;
+			padding: 0px;
+			width: 100%;
+			text-align: center;
+			li {
+				margin: 0;
+				color: $color-gold;
+				list-style-type: none;
+				a {
+					text-decoration: none;
+					font-weight: 700;
+					color: $color-gold;
+					&:hover {
+						font-weight: 700;
+						color: white;
+					}
+				}
+			}
+		}
+
+		.widgettitle {
+			text-align: center;
+			font-size: 20pt;
+			margin: 0;
+			font-weight: 700;
+			color: white;
+			padding: 5px;
+			border-bottom: 1px solid $color-primary;
+			a {
+				color: white;
+			}
+		}
+	}
+	
+}
+
+/* =========================================================
+Comments
+ ========================================================= */
+$common_padding_for_comment_text: 5px;
+
+#comments {
+	background-color: white;
+	font-size: larger;
+}
+.comment-respond {
+	h3.comment-reply-title {
+		font-weight: bolder;
+		font-color: gray;
+		font-size: x-large;
+		padding: $common_padding_for_comment_text;
+	}
+	// p.comment-notes {
+	// 	font-size: larger;
+	// 	padding: $common_padding_for_comment_text;
+	// }
+	// .required {
+	// 	font-weight: bolder;
+	// 	color: crimson;
+	// }
+
+	// form.comment-form {
+	// 	p {
+	// 		label {
+	// 			width: 100%;
+	// 			font-weight: bold;
+	// 		}
+
+	// 		textarea {
+	// 			width: 100%;
+	// 			height: 70px;
+	// 			overflow-x: hidden;
+	// 			overflow-y: hidden;
+	// 			word-wrap: break-word;
+	// 			resize: none;
+	// 			border: 2px solid rgb(179,179,179);
+	// 			background: transparent;
+	// 			color: grey;
+	// 		}
+
+	// 		input[type="text"] {
+	// 			width: 100%;
+	// 			outline-color: initial;
+	// 			outline-style: none;
+	// 			outline-width: initial;
+	// 			line-height: 18px !important;
+	// 			border: 2px solid rgb(179,179,179);
+	// 			font-size: 12px !important;
+	// 			padding: 1px;
+	// 			color: grey;
+	// 		}
+
+	// 		input[type="submit"] {
+	// 			float: left;
+	// 			outline-color: initial;
+	// 			outline-style: none;
+	// 			outline-width: initial;
+	// 			border: 1px solid #ccc;
+	// 			border-radius: 10px;
+	// 			font-size: 18px !important;
+	// 			padding: 10px !important;
+	// 			width: auto;
+	// 			height: auto;
+	// 			box-shadow: none;
+	// 			font-weight: normal;
+	// 			text-transform: uppercase;
+	// 			&:hover{
+	// 				border: 1px solid #aaa;
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+
+
+ol.commentlist {
+
+     list-style:none; 
+     margin:0 0 1em; 
+     padding:0; 
+     text-indent:0;
+
+ 	li {}
+ 	li.alt {}
+	li.bypostauthor {}
+	li.byuser {}
+	li.comment-author-admin {}
+
+
+	li.comment {
+		border-bottom: 1px solid #ddd; 
+		padding:1em;
+
+		.comment-author {
+			
+		} // end .comment-author
+
+		
+		div.vcard {
+
+			font-weight: 14px;
+			
+			cite.fn {
+				a.url {}
+			 } // end cite.fn
+
+			 img.avatar {
+			 	border:1px solid #ccc; 
+			 	float:left; 
+			 	margin:0 0 20px 20px;
+			 } // end .avatar
+
+			 img.avatar-32 {} // end .avatar-32
+			 img.photo {} // end .photo
+			 span.says {} // ebd .says
+
+		}  // end .vcard
+
+		div.commentmetadata {} // end .commentmetadata
+		div.comment-meta {
+
+			font-size: 11px;
+
+				a {
+					color: #ccc;
+				} // end a
+
+		} // end div.comment-meta
+
+		p {font-size: 12px;} // end p
+
+		ul {
+			font-size: 12px;
+			list-style: none;
+			margin: 0 0 0 20px;
+		} // end ul
+
+		div.reply {
+
+			font-size: 11px;
+
+			a {font-weight: bold;} // end a
+
+		} // end reply
+
+		 ul.children {
+			list-style:none; 
+			margin: 12px; 
+			text-indent:0;
+
+			li {} // end li
+
+			li.alt {} 
+			li.bypostauthor {}
+			li.byuser {}
+			li.comment {}
+			li.comment-author-admin {}
+
+			li.depth-2 { border-left: 5px solid #ccc; margin:0 0 10px 10px; }
+			li.depth-3 { border-left: 5px solid #bbb; margin:0 0 10px 10px; }
+			li.depth-4 { border-left: 5px solid #aaa; margin:0 0 10px 10px; }
+			li.depth-5 {} // you get the idea
+
+			li.odd {} // end .odd
+
+		}  // end ul.children
+
+	}  // end li.comment
+
+	li.even {background:#fff;}
+	li.odd {background:#f6f6f6;}
+	li.parent {border-left:5px solid #ddd;}
+	li.thread-alt {}
+	li.thread-even {}
+	li.thread-odd {}
+
+ } // end commentlist
+
+/*=====================================
+Footer
+===================================== */
+ 
+footer {
+	text-align: center;
+	position: relative;
+	top: 100%;
+	left: 0;
+	bottom: 0;
+	height: auto;
+	width: 100%;
+	padding-top: 2em;
+	background: $color-primary;
+	color: $color-gold;
+	font-weight: 700;
+}
+.logo {
+	vertical-align: middle;
+	width: 50px!important;
+}
+.share-buttons {
+	li {
+		vertical-align: middle;
+		display: inline-block;
+	}
+	&:first-child {
+		font-size: large;
+	}
+}
+.clearfix {
+	overflow: auto;
+	zoom: 1;
+}
